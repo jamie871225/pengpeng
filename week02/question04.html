@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 04</title>
+    <script type="text/javascript">
+    function twoSum(nums, target){
+        var x=[]
+        var y=nums.length
+        for(var i=0;i<y;i++){
+            var b=nums[i]
+            for(j=1;j<y;j++){
+                var c=nums[j]
+                if(b+c==target){
+                    return [i,j]
+                }
+            }
+        }
+    }
+    result=twoSum([2, 11, 7, 15], 9)
+    console.log(result) // show [0, 2] because nums[0]+nums[2] is 9
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
