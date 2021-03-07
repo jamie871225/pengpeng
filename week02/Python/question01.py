@@ -1,5 +1,4 @@
 def calculate(min, max):
-    # 請用你的程式補完這個函式的區塊
     sum=0
     for a in range(min,max+1):
         sum+=a
