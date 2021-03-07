@@ -1,5 +1,4 @@
 def avg(data):
-    # 請用你的程式補完這個函式的區塊
     a=data["employees"]
     b=data["count"]
     x=0
