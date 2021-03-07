@@ -1,5 +1,4 @@
 def maxProduct(nums):
-    # 請用你的程式補完這個函式的區塊
     a=sorted(nums, reverse=True)
     b=sorted(nums)
     x=a[0]*a[1]
