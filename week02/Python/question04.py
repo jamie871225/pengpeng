@@ -1,5 +1,4 @@
 def twoSum(nums, target):
-    # 請用你的程式補完這個函式的區塊
     x=[]
     for a,b in enumerate(nums):
         if target-nums[a] in nums:
