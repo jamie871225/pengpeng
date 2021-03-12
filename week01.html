@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Week 01</title>
+    <title>Question 02</title>
 
     <meta name="author" content="Jamie Kuan">
     <meta name="description" content="Week 01 Challenge">
 
     <link rel="stylesheet" href="css/week01.css">
+    <script type="text/javascript">
+        var spotData =new XMLHttpRequest();
+        spotData.open("get","https://padax.github.io/taipei-day-trip-resources/taipei-attractions.json",true);
+        spotData.onload=function(){
+            var spotText=JSON.parse(spotData.responseText);
+            document.querySelector(".tt").textContent=spotText.result.results[0].info;
+        };
+        spotData.send();
+
+        var pText=document.createElement('p');
+        pText.textContent='abcde';
+        document.querySelector(".img-text").appendChild(pText);
+
+        // function getData(){
+        //     var req=new XMLHttpRequest();
+        //     req.open("get", "https://padax.github.io/taipei-day-trip-resources/taipei-attractions.json");
+        //     req.onload=function(){
+        //         var content=document.getElementById("test");
+        //         content.innerHTML=this.responseText;
+        //     };
+        //     req.send();
+        // };
+        </script>
 </head>
 <body>
     <header>
@@ -40,39 +63,44 @@
     </section>
     <section class="minho">
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho">
+            <img src="" alt="Lee Min Ho">
             </img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho">
+            <img src="" alt="Lee Min Ho">
             </img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
         <div class="img-text">
-            <img src="images/liminho.jpg" alt="Lee Min Ho"></img>
+            <img src="" alt="Lee Min Ho"></img>
             <p>Lee Min Ho</p>
         </div>
     </section>
+    <div id="test" onclick="getData();">Hello World.</div>
+    <div>
+        <p class="tt"></p>
+    </div>
+    <div class="img-text"></div>
 </body>
 </html>
