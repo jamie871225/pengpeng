@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member</title>
+
+    <style type="text/css">
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1.5;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    img{
+        max-width:100%;
+        height:auto;
+    }
+    *,*::before,*::after{
+        box-sizing:border-box;
+    }
+    /* CSS reset END */
+    .pure-form input[type="text"],
+    .pure-form input[type="password"]{
+        padding: 0.8em;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        border-radius: 4px;
+        vertical-align: middle;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom:0.6em;
+        font-size:14px;
+        width:200px;
+        margin-top:0.55em;
+    }
+    .pure-form input[type="text"]:focus,
+    .pure-form input[type="password"]:focus{
+        outline: 0;
+        border-color:rgb(211, 86, 103);
+    }
+    .pure-form input:not([type]):focus {
+        outline: 0;
+        border-color:rgb(211, 86, 103);
+    }
+    .pure-form label{
+        font-size:18px;
+    }
+    /* Pure form END */
+
+    .pure-button {
+        /* Structure */
+        display: inline-block;
+        zoom: 1;
+        line-height: normal;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .pure-button {
+        font-size: 16px;
+        margin-top:3em;
+        padding: 0.7em 0em;
+        color: white;
+        border: 1px solid #999;  /*IE 6/7/8*/
+        border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    .pure-button a{
+        text-decoration:none;
+        color:white;
+        padding:1.4em;
+        border: 1px solid #999;  /*IE 6/7/8*/
+        border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+        border-radius: 3px;
+        background-color: rgb(234, 168, 176);
+    }
+    .pure-button:focus {
+        outline: 0;
+    }
+    .pure-button a:hover{
+        background-color:rgb(236, 186, 192);
+    }
+    /* Pure button END */
+
+    body{
+        font-family:Helvetica;
+        color:rgb(65, 54, 54);
+        background-color:rgb(249, 239, 239);
+    }
+    .login{
+        display:flex;
+        justify-content:center;
+        padding-top:120px;
+        padding-bottom:120px;
+    }
+    .wrap{
+        padding:30px 75px;
+        text-align:center;
+        display:inline-block;
+        background-color:white;
+        border-radius:5px;
+        box-shadow:0px 5px 20px rgb(210, 210, 210);
+    }
+    .login h1{
+        color:rgb(211, 86, 103);
+        font-size:24px;
+        padding:0px 0px 10px 0px;
+        font-weight:bold;
+    }
+    .btn-inquire{
+        display: inline-block;
+        font-size: 16px;
+        margin-top:0em;
+        color:white;
+        padding:0.7em 1.4em;
+        border: 1px solid #999;  /*IE 6/7/8*/
+        border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+        border-radius: 3px;
+        background-color: rgb(234, 168, 176);
+    }
+    .btn-inquire:hover{
+        background-color:rgb(236, 186, 192);
+    }
+    .h2-inquire{
+        margin:100px 0px 5px 0px;
+        font-size:18px;
+    }
+    .h2-upgrade{
+        margin:40px 0px 5px 0px;
+        font-size:18px;
+    }
+    .recover-text{
+        margin-top:10px;
+        padding-bottom:20px;
+        color:rgb(211, 86, 103);
+        font-size:18px;
+    }
+    </style>
+    <script>
+        function inquire(){
+            var username=document.getElementById("searchName")
+            var searchKeyword={
+                username:username.value
+            };
+            fetch(`http://127.0.0.1:3000/inquireusername`, {
+                method:"POST",
+                credentials:"include",
+                body:JSON.stringify(searchKeyword),
+                cache:"no-cache",
+                headers:new Headers({
+                    "content-type":"application/json"
+                })
+            })
+            .then(function(response){
+                if (response.status !== 200){
+                    console.log("Response status was not 200");
+                    return ;
+                }
+                response.json().then(function(data){
+                    // console.log(data.name)
+                    // var recoverInquire=document.createElement("recoverInquire")
+                    // var recoverText=document.createTextNode(String(data.name))
+                    // recoverInquire.appendChild(recoverText)
+                    // document.getElementById("recover-inquire").appendChild(recoverInquire)
+                    window.document.getElementById("recover-inquire").innerHTML=String(data.name)
+                })
+            })
+        };
+        function update(){
+            var name=document.getElementById("updateName")
+            var updateKeyword={
+                name:name.value
+            };
+            fetch(`http://127.0.0.1:3000/api/user`, {
+                method:"POST",
+                credentials:"include",
+                body:JSON.stringify(updateKeyword),
+                cache:"no-cache",
+                headers:new Headers({
+                    "content-type":"application/json"
+                })
+            })
+            .then(function(response){
+                if (response.status !== 200){
+                    console.log("Response status was not 200");
+                    return ;
+                }
+                response.json().then(function(data){
+                    console.log(data)
+                    window.document.getElementById("recover-update").innerHTML=String(data)
+                })
+            })
+        };
+    </script>
+</head>
+<body>
+    <section class="login">
+        <div class="wrap">
+            <h1>- Successfully -</h1>
+            <form action="/signin" class="pure-form form-login" method="POST">
+                <p>{{name}}，歡迎登入會員</p>
+                <button class="pure-button"><a href="/signout">登出</a></button>
+            </form>
+            <h2 class="h2-inquire">- 查詢會員姓名 -</h2>
+            <div class="pure-form">
+                <input type="text" id="searchName" name="inquire" placeholder="使用者名稱">
+                <button class="pure-button btn-inquire" onclick="inquire()">查詢</button>
+            </div>
+            <p class="recover-text" id="recover-inquire"></p>
+            <h2 class="h2-upgrade">- 更新我的姓名 -</h2>
+            <div class="pure-form">
+                <input type="text" id="updateName" name="inquire" placeholder="新的姓名">
+                <button class="pure-button btn-inquire" onclick="update()">更新</button>
+            </div>
+            <p class="recover-text" id="recover-update"></p>
+        </div>
+    </section>
+</body>
+</html>
